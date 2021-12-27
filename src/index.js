@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Todo from "./components/ToDo";
+import {FunToDo} from "./functionalComp/FunToDo";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/*<App />*/}
+    {/*<Todo/>*/}
+    <FunToDo/>
   </React.StrictMode>,
   document.getElementById('root')
 );
