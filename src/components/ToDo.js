@@ -29,6 +29,9 @@ class Todo extends Component{
         console.log('NewItems', items)
         this.setState({items: items})
     }
+    handleDeleteAll = () =>{
+        this.setState({items: []})
+    }
     render() {
         const {items} = this.state
         return(
@@ -48,7 +51,7 @@ class Todo extends Component{
                             </div>
                         </div>
                         {items.length > 0 &&
-                        <TodoList dataList={items} delData={this.handleDelete}/>
+                        <TodoList dataList={items} delData={this.handleDelete} deleteAll={this.handleDeleteAll}/>
                         }
                     </div>
                 </div>

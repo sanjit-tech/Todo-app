@@ -8,7 +8,7 @@ class TodoList extends Component{
         }
     }
     render() {
-        const {dataList, delData} = this.props
+        const {dataList, delData, deleteAll} = this.props
         return(
             <div className="row p-3">
                 <div className="col-sm-12">
@@ -16,8 +16,8 @@ class TodoList extends Component{
                         {dataList.map((data, i)=>{
                             return(
                                 <Fragment key={i} >
-                                <li className="col-sm-9">{data}</li>
-                                <li className="col-sm-2">
+                                <li className="col-sm-9 mt-3">{data}</li>
+                                <li className="col-sm-2 mt-3">
                                     <button className="btn btn-danger px-2"
                                         onClick={()=>delData(i)}
                                 ><i className="bi bi-trash-fill"></i></button></li>
@@ -26,6 +26,7 @@ class TodoList extends Component{
                         })}
 
                     </ul>
+                    <a className="btn btn-danger" onClick={()=> deleteAll()}><i className="bi bi-trash-fill"></i> Delete All</a>
                 </div>
             </div>
         )
