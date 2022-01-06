@@ -9,8 +9,8 @@ import {FunToDo} from "./functionalComp/FunToDo";
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
-    {/*<Todo/>*/}
-    <FunToDo/>
+    <Todo/>
+    {/*<FunToDo/>*/}
   </React.StrictMode>,
   document.getElementById('root')
 );
